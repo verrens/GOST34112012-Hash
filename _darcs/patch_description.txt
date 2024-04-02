@@ -1,4 +1,4 @@
-Begin
+Cleaning
 # Please enter the patch name in the first line, and
 # optionally, a long description in the following lines.
 #
@@ -7,70 +7,9 @@ Begin
 #
 # Summary of selected changes:
 #
-# A ./CHANGELOG.md
-# A ./GOST3411-Hash.cabal
-# A ./LICENSE
-# A ./c_src/
-# A ./c_src/GOST3411.c
-# A ./c_src/streebog/
-# A ./c_src/streebog/.gitignore
-# A ./c_src/streebog/.travis.yml
-# A ./c_src/streebog/32.patch
-# A ./c_src/streebog/Changelog
-# A ./c_src/streebog/Dockerfile
-# A ./c_src/streebog/LICENSE
-# A ./c_src/streebog/LICENSE.GPL2
-# A ./c_src/streebog/Makefile
-# A ./c_src/streebog/README.md
-# A ./c_src/streebog/VERSION
-# A ./c_src/streebog/auto/
-# A ./c_src/streebog/auto/Makefile
-# A ./c_src/streebog/auto/header/
-# A ./c_src/streebog/auto/header/endianness
-# A ./c_src/streebog/auto/header/mmx
-# A ./c_src/streebog/auto/header/sse2
-# A ./c_src/streebog/auto/header/sse41
-# A ./c_src/streebog/auto/header/supercop
-# A ./c_src/streebog/auto/mk/
-# A ./c_src/streebog/auto/mk/mmx
-# A ./c_src/streebog/auto/mk/sse2
-# A ./c_src/streebog/auto/mk/sse41
-# A ./c_src/streebog/auto/os/
-# A ./c_src/streebog/auto/os/linux
-# A ./c_src/streebog/auto/test.txt
-# A ./c_src/streebog/configure
-# A ./c_src/streebog/examples/
-# A ./c_src/streebog/examples/H1.256
-# A ./c_src/streebog/examples/H1.512
-# A ./c_src/streebog/examples/H2.256
-# A ./c_src/streebog/examples/H2.512
-# A ./c_src/streebog/examples/H3.256
-# A ./c_src/streebog/examples/H3.512
-# A ./c_src/streebog/examples/H4.256
-# A ./c_src/streebog/examples/H4.512
-# A ./c_src/streebog/examples/M1
-# A ./c_src/streebog/examples/M2
-# A ./c_src/streebog/examples/M3
-# A ./c_src/streebog/examples/M4
-# A ./c_src/streebog/examples/README
-# A ./c_src/streebog/git_log
-# A ./c_src/streebog/gost3411-2012
-# A ./c_src/streebog/gost3411-2012-config.h
-# A ./c_src/streebog/gost3411-2012-const.h
-# A ./c_src/streebog/gost3411-2012-core.c
-# A ./c_src/streebog/gost3411-2012-core.h
-# A ./c_src/streebog/gost3411-2012-mmx.h
-# A ./c_src/streebog/gost3411-2012-precalc.h
-# A ./c_src/streebog/gost3411-2012-ref.h
-# A ./c_src/streebog/gost3411-2012-sse2.h
-# A ./c_src/streebog/gost3411-2012-sse41.h
-# A ./c_src/streebog/gost3411-2012.1.h2m
-# A ./c_src/streebog/gost3411-2012.c
-# A ./c_src/streebog/gost3411-2012.spec
-# A ./c_src/streebog.c
-# A ./src/
-# A ./src/Data/
-# A ./src/Data/Digest/
-# A ./src/Data/Digest/GOST3411.hsc
-# A ./test/
-# A ./test/Main.hs
+# R ./GOST3411-Hash.cabal
+# R ./c_src/GOST3411.c
+# R ./c_src/streebog.c
+# R ./src/Data/Digest/GOST3411.hsc
+# A ./src/Data/Digest/GOST34112012/
+# A ./src/Data/Digest/GOST34112012/Hash.hsc
