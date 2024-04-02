@@ -1,4 +1,4 @@
-Cleaning
+Cleaning.
 # Please enter the patch name in the first line, and
 # optionally, a long description in the following lines.
 #
@@ -7,9 +7,6 @@ Cleaning
 #
 # Summary of selected changes:
 #
-# R ./GOST3411-Hash.cabal
-# R ./c_src/GOST3411.c
-# R ./c_src/streebog.c
-# R ./src/Data/Digest/GOST3411.hsc
-# A ./src/Data/Digest/GOST34112012/
-# A ./src/Data/Digest/GOST34112012/Hash.hsc
+# A ./GOST34112012-Hash.cabal
+# M ./src/Data/Digest/GOST34112012/Hash.hsc -59 +39
+# M ./test/Main.hs -1 +32
