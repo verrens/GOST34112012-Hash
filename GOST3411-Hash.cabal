@@ -1,0 +1,46 @@
+cabal-version:        3.0
+name:                 GOST3411-Hash
+version:              0.1.1.0
+synopsis:             XXX TODO XXX
+description:          XXX TODO XXX XXX XXX
+homepage:             https://github.com/verrens/Gost3411-Hash
+license:              GPL-2.0-or-later
+license-file:         LICENSE
+author:               Denis Afonin
+maintainer:           verrens@yandex.ru
+-- copyright:
+category:             Cryptography, Codec
+build-type:           Simple
+extra-doc-files:      CHANGELOG.md
+-- extra-source-files:
+
+common warnings
+    ghc-options:      -Wall
+
+library
+    import:           warnings
+    exposed-modules:  Data.Digest.GOST3411
+    -- other-modules:
+    -- other-extensions:
+    build-depends:    base ^>=4.17.2.1,
+                      bytestring >= 0.11.5 && < 0.12
+    hs-source-dirs:   src
+    default-language: Haskell2010
+    c-sources:        c_src/GOST3411.c
+                      c_src/streebog/gost3411-2012-core.c
+    includes:         c_src/streebog/gost3411-2012-core.h
+    include-dirs:     c_src/streebog
+    ghc-options:      -optc-msse4.1
+                      -optc-msse2
+                      -optc-mmmx
+
+test-suite GOST3411-Hash-test
+    import:           warnings
+    default-language: Haskell2010
+    -- other-modules:
+    -- other-extensions:
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    main-is:          Main.hs
+    build-depends:    base ^>=4.17.2.1,
+                      GOST3411-Hash
