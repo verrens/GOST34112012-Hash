@@ -1,4 +1,4 @@
-Cleaning.
+testing
 # Please enter the patch name in the first line, and
 # optionally, a long description in the following lines.
 #
@@ -7,6 +7,96 @@ Cleaning.
 #
 # Summary of selected changes:
 #
-# A ./GOST34112012-Hash.cabal
-# M ./src/Data/Digest/GOST34112012/Hash.hsc -59 +39
-# M ./test/Main.hs -1 +32
+# M ./GOST34112012-Hash.cabal -3 +15
+# M ./LICENSE -8 +8
+# A ./c_src/streebog/examples/H5.256
+# A ./c_src/streebog/examples/H5.512
+# A ./c_src/streebog/examples/H6.256
+# A ./c_src/streebog/examples/H6.512
+# A ./c_src/streebog/examples/H7.256
+# A ./c_src/streebog/examples/H7.512
+# A ./c_src/streebog/examples/H8.256
+# A ./c_src/streebog/examples/H8.512
+# A ./c_src/streebog/examples/M5
+# A ./c_src/streebog/examples/M6
+# A ./c_src/streebog/examples/M8
+# A ./c_src/streebog/examples/make4Gb
+# R ./c_src/streebog/gost3411-2012
+# A ./c_src/streebog__/
+# A ./c_src/streebog__/.gitignore
+# A ./c_src/streebog__/.travis.yml
+# A ./c_src/streebog__/Changelog
+# A ./c_src/streebog__/Dockerfile
+# A ./c_src/streebog__/LICENSE
+# A ./c_src/streebog__/LICENSE.GPL2
+# A ./c_src/streebog__/Makefile
+# A ./c_src/streebog__/README.md
+# A ./c_src/streebog__/VERSION
+# A ./c_src/streebog__/auto/
+# A ./c_src/streebog__/auto/header/
+# A ./c_src/streebog__/auto/header/endianness
+# A ./c_src/streebog__/auto/header/mmx
+# A ./c_src/streebog__/auto/header/sse2
+# A ./c_src/streebog__/auto/header/sse41
+# A ./c_src/streebog__/auto/header/supercop
+# A ./c_src/streebog__/auto/mk/
+# A ./c_src/streebog__/auto/mk/mmx
+# A ./c_src/streebog__/auto/mk/sse2
+# A ./c_src/streebog__/auto/mk/sse41
+# A ./c_src/streebog__/auto/os/
+# A ./c_src/streebog__/auto/os/linux
+# A ./c_src/streebog__/auto/test.txt
+# A ./c_src/streebog__/configure
+# A ./c_src/streebog__/examples/
+# A ./c_src/streebog__/examples/H1.256
+# A ./c_src/streebog__/examples/H1.512
+# A ./c_src/streebog__/examples/H2.256
+# A ./c_src/streebog__/examples/H2.512
+# A ./c_src/streebog__/examples/H3.256
+# A ./c_src/streebog__/examples/H3.512
+# A ./c_src/streebog__/examples/H4.256
+# A ./c_src/streebog__/examples/H4.512
+# A ./c_src/streebog__/examples/M1
+# A ./c_src/streebog__/examples/M2
+# A ./c_src/streebog__/examples/M3
+# A ./c_src/streebog__/examples/M4
+# A ./c_src/streebog__/examples/README
+# A ./c_src/streebog__/gost3411-2012-const.h
+# A ./c_src/streebog__/gost3411-2012-core.c
+# A ./c_src/streebog__/gost3411-2012-core.h
+# A ./c_src/streebog__/gost3411-2012-mmx.h
+# A ./c_src/streebog__/gost3411-2012-precalc.h
+# A ./c_src/streebog__/gost3411-2012-ref.h
+# A ./c_src/streebog__/gost3411-2012-sse2.h
+# A ./c_src/streebog__/gost3411-2012-sse41.h
+# A ./c_src/streebog__/gost3411-2012.1.h2m
+# A ./c_src/streebog__/gost3411-2012.c
+# A ./c_src/streebog__/gost3411-2012.spec
+# M ./src/Data/Digest/GOST34112012/Hash.hsc -5 +6
+# M ./test/Main.hs -10 +91
+# A ./test/etalon/
+# A ./test/etalon/H1.256
+# A ./test/etalon/H1.512
+# A ./test/etalon/H2.256
+# A ./test/etalon/H2.512
+# A ./test/etalon/H3.256
+# A ./test/etalon/H3.512
+# A ./test/etalon/H4.256
+# A ./test/etalon/H4.512
+# A ./test/etalon/H5.256
+# A ./test/etalon/H5.512
+# A ./test/etalon/H6.256
+# A ./test/etalon/H6.512
+# A ./test/etalon/H7.256
+# A ./test/etalon/H7.512
+# A ./test/etalon/H8.256
+# A ./test/etalon/H8.512
+# A ./test/etalon/M1
+# A ./test/etalon/M2
+# A ./test/etalon/M3
+# A ./test/etalon/M4
+# A ./test/etalon/M5
+# A ./test/etalon/M6
+# A ./test/etalon/M8
+# A ./test/etalon/README
+# A ./test/etalon/make4Gb

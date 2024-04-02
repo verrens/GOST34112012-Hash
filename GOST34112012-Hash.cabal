@@ -1,12 +1,20 @@
 cabal-version:        3.0
 name:                 GOST34112012-Hash
 version:              0.1.1.0
-synopsis:             XXX TODO XXX
-description:          XXX TODO XXX XXX XXX
+synopsis:             Bindings to implementation of the GOST R 34.11-2012 hash
+description:          Binds https://github.com/adegtyarev/streebog , a C
+                      implementation of the GOST R 34.11-2012 hash function.
+                      See @c_src/streebog/README.md@ and
+                      "Data.Digest.GOST34112012.Hash" to get started.
 homepage:             https://github.com/verrens/Gost34112012-Hash
 license:              GPL-2.0-or-later
 license-file:         LICENSE
-author:               Denis Afonin
+author:               Alexey Degtyarev <alexey@renatasystems.org>,
+                      Björn Esser <besser82@fedoraproject.org>,
+                      Denis Afonin <verrens@yandex.ru>,
+                      Kirill K. Smirnov <kirill.k.smirnov@gmail.com>,
+                      Mikhail Kasimov <mikhail.kasimov@gmail.com>,
+                      Vitaly Chikunov <vt@altlinux.org>
 maintainer:           verrens@yandex.ru
 -- copyright:
 category:             Cryptography, Codec
@@ -43,6 +51,11 @@ test-suite GOST3411-Hash-test
     main-is:          Main.hs
     build-depends:    base ^>=4.17.2.1,
                       GOST34112012-Hash,
+                      bytestring >= 0.11.5 && < 0.12,
                       text >= 2.0.2 && < 2.1,
                       utf8-string >= 1.0.2 && < 1.1,
                       base16-bytestring >= 1.0.2 && < 1.1
+
+source-repository head
+  type:               git
+  location:           https://github.com/verrens/Gost34112012-Hash

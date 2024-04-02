@@ -1,8 +1,8 @@
 module Data.Digest.GOST34112012.Hash where
 import Foreign hiding (newForeignPtr)
 import Foreign.Concurrent (newForeignPtr)
-import Foreign.C (newCString, CInt(..), CUInt(..), CSize(..), CString)
-import Data.ByteString (ByteString, useAsCStringLen, packCString)
+import Foreign.C (newCStringLen, CInt(..), CUInt(..), CSize(..), CString)
+import Data.ByteString (ByteString, useAsCStringLen, packCStringLen)
 import Control.Monad (when)
 
 #include <gost3411-2012-core.h>
@@ -45,9 +45,10 @@ updateGOST34112012Hash ctx bytes = useAsCStringLen bytes $ \(s, l) ->
 
 finishGOST34112012Hash :: GOST34112012HashContext -> IO ByteString
 finishGOST34112012Hash context = withForeignPtr context $
-  \ctx -> peek ctx >>= \c -> if isCorrectGOST34112012HashCtx c then do
-      v <- newCString $ replicate 64 ' '
-      cGOST34112012Final ctx v >> cGOST34112012Cleanup ctx >> packCString v
+  \ctx -> peek ctx >>= \c -> if isCorrectGOST34112012HashCtx c then
+      newCStringLen (replicate 64 ' ') >>= \(v, _) -> cGOST34112012Final ctx v
+        >> cGOST34112012Cleanup ctx >> packCStringLen (v,
+          if 512 == cGOST34112012HashDigestSize c then 64 else 32)
     else fail $ "Unexpected state: " ++ show c
 
 getGOST34112012HashBufSize :: GOST34112012HashContext -> IO Int
