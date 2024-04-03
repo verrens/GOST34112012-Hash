@@ -1,0 +1,3 @@
+[submodule "c_src/streebog"]
+	path = c_src/streebog
+	url = https://github.com/adegtyarev/streebog
