@@ -30,7 +30,7 @@ main = do
   TIO.readFile "c_src/streebog/LICENSE.GPL2" >>=
     hashB16 256 >>= test "LICENSE.GPL2" licenseB16_256
 
-  forM_ [ (bs, i) | i <- [1, 3, 4, 5, 6], bs <- digestSizes ] $ uncurry $
+  forM_ [ (bs, i) | i <- [1, 3, 4, 5, 6], bs <- [512, 256] ] $ uncurry $
     testM t0 TIO.readFile hashB16
     
   testM t0 BIO.readFile hashB16B 512 2 -- win-1251 
@@ -66,8 +66,8 @@ licenseB16_512 = toUpper "7ECACDDC1E3C92DBE2CDA16F2B035BD5278CDA5AB248F94117853C
 licenseB16_256 :: Text
 licenseB16_256 = "972B18C6ABA96CBADB6C1F817DFB7CBCA2E08BCA5513819E05CEF85B69A7E1CC"
 
-etalonsCheck :: String -> Text
-etalonsCheck tid = maybe (error $ "Unexpected etalon " ++ tid) id $ lookup tid [
+etalonsCheck :: String -> Text -> Bool
+etalonsCheck tid csum = maybe False (== csum) $ lookup tid [
   ("1.512", "D7630524FCAF7054613064EE5FE1D19885FCD33B2F74FB074F1A6724420E127F"),
   ("1.256", "C81762568A91969C2FFBC4EE9F4817B636043BFA95A9A25FBCDBAF4ADB8D3ACE"),
   ("2.512", "35A4B0011506B6521A7222FECAF2E97F6C3482F55ABA4F821D6302E8EF553551"),
@@ -92,8 +92,8 @@ testM t0 r h bs n = do
   putStrLn $ pack $ "[" ++ show (t - t0) ++ "] Processing etalon " ++ show tid
   chk <- TIO.readFile $ etalonPath ++ "H" ++ tid
   csum <- hashB16 256 chk
-  if csum /= etalonsCheck tid
-    then fail $ unpack $ "Etalon csum mismatch: '" <>
+  if not $ etalonsCheck tid csum
+    then fail $ unpack $ "Etalon csum mismatch, please add to function etalonCheck: '" <> 
       " (\"" <> pack tid <> "\", \"" <> csum <> "\")"
     else do
       tst <- r (etalonPath ++ "M" ++ show n) >>= h bs
